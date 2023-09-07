@@ -130,12 +130,16 @@ p {
     }
 } 
 @media (min-width: 320px ) {
-    
+    img{
+        width: 100%;
+    }
 }
 
     @media (min-width: 768px ) {
     
-    
+        img{
+            width: 100%;
+        }
     
     }
     @media (min-width: 990px ) {
