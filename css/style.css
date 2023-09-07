@@ -1,0 +1,144 @@
+/* Reset de estilos y estilos básicos */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el navbar */
+nav {
+    background-color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.logo01{
+    color: green;
+}
+.logotext{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: greenyellow;
+    text-decoration: none;
+    font-size: 1.8rem;
+
+}
+.logo img {
+    width: 100px; /* Ajusta el tamaño de tu logo según tus necesidades */
+    height: auto;
+}
+
+.menu-toggle button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FF5733;
+}
+
+/* Estilos para el menú desplegable (oculto por defecto) */
+.menu-toggle {
+    display: none;
+}
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.redes-sociales {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.redes-sociales img {
+    width: 30px; /* Ajusta el tamaño de los iconos según tus necesidades */
+    height: 30px;
+}
+
+.redes-sociales a:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último icono */
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+}
+.twitter{
+    color: yellow;
+}
+.instagram{
+    color: violet;
+}
+.linkedin{
+    color: lightblue;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        top: 60px; /* Ajusta la posición del menú según tus necesidades */
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+} 
+@media (min-width: 320px ) {
+    
+}
+
+    @media (min-width: 768px ) {
+    
+    
+    
+    }
+    @media (min-width: 990px ) {
+        
+        
+        }
