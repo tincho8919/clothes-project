@@ -103,6 +103,8 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
 .menu li {
@@ -190,6 +192,10 @@ p {
         right: 0;
         left: 0;
         z-index: 1;
+        gap: 2rem;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .menu.active {

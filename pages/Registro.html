@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/Shirts.css">
+    <link rel="stylesheet" href="../css/Registro.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -31,72 +33,54 @@
             </div>
         </nav>
     </header>
-    <section>
+    <section class="color">
         <main>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Comprar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Sección para Hombres -->
-                    <tr class="section-header">
-                        <td colspan="3">Hombres</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://th.bing.com/th/id/OIP.its10aL0fv7qwEDcmO355AHaHa?pid=ImgDet&rs=1" alt="Producto 1"></td>
-                        <td>$30.00</td>
-                        <td><button onclick="buyProduct('Producto 1')">Buy</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://th.bing.com/th/id/OIP.Q-alAt8bxX3Le6t8a917ngHaHa?pid=ImgDet&rs=1" alt="Producto 2"></td>
-                        <td>$25.00</td>
-                        <td><button onclick="buyProduct('Producto 2')">Buy</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://th.bing.com/th/id/OIP.its10aL0fv7qwEDcmO355AHaHa?pid=ImgDet&rs=1" alt="Producto 1"></td>
-                        <td>$30.00</td>
-                        <td><button onclick="buyProduct('Producto 1')">Buy</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://th.bing.com/th/id/OIP.Q-alAt8bxX3Le6t8a917ngHaHa?pid=ImgDet&rs=1" alt="Producto 2"></td>
-                        <td>$25.00</td>
-                        <td><button onclick="buyProduct('Producto 2')">Buy</button></td>
-                    </tr>
-                    <!-- Sección para Mujeres -->
-                    <tr class="section-header">
-                        <td colspan="3">Mujeres</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://th.bing.com/th/id/R.379f76073b3aca246ea3fe49b9db3f23?rik=sIBNLQ1ismp0Gw&pid=ImgRaw&r=0" alt="Producto 3"></td>
-                        <td>$35.00</td>
-                        <td><button onclick="buyProduct('Producto 3')">Buy</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://th.bing.com/th/id/OIP.YSOc651h180vm0PeUfnTgAHaLH?pid=ImgDet&rs=1" alt="Producto 4"></td>
-                        <td>$40.00</td>
-                        <td><button onclick="buyProduct('Producto 4')">Buy</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://th.bing.com/th/id/R.379f76073b3aca246ea3fe49b9db3f23?rik=sIBNLQ1ismp0Gw&pid=ImgRaw&r=0" alt="Producto 3"></td>
-                        <td>$35.00</td>
-                        <td><button onclick="buyProduct('Producto 3')">Buy</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://th.bing.com/th/id/OIP.YSOc651h180vm0PeUfnTgAHaLH?pid=ImgDet&rs=1" alt="Producto 4"></td>
-                        <td>$40.00</td>
-                        <td><button onclick="buyProduct('Producto 4')">Buy</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="alert">
-                <div class="alert-box">
-                    <p id="message"></p>
-                </div>
+            <div class="container">
+                <h2>Registro</h2>
+                <form action="#" method="post" id="registrationForm">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="age">Edad:</label>
+                    <input type="number" id="age" name="age" required>
+
+                    <label for="dob">Fecha de nacimiento:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label>Género:</label>
+                    <input type="radio" id="male" name="sex" value="male">
+                    <label for="male">Masculino</label>
+                    <input type="radio" id="female" name="sex" value="female">
+                    <label for="female">Femenino</label>
+                    <input type="radio" id="other" name="sex" value="other">
+                    <label for="other">Otro</label>
+
+                    <label for="country">País:</label>
+                    <select id="country" name="country" required>
+                        <option value="usa">Estados Unidos</option>
+                        <option value="canada">Canadá</option>
+                        <!-- Agrega más opciones aquí -->
+                    </select>
+
+                    <label for="province">Provincia:</label>
+                    <input type="text" id="province" name="province" required>
+
+                    <label for="locality">Localidad:</label>
+                    <input type="text" id="locality" name="locality" required>
+
+                    <label for="description">Descripción:</label>
+                    <textarea id="description" name="description"></textarea>
+
+                    <button type="button" onclick="submitForm()">Registrar</button>
+                </form>
             </div>
+            <div id="userData"></div>
         </main>
     </section>
     <footer>
@@ -125,6 +109,7 @@
         </div>
         <p>© 2023 Your company. All rights reserved.</p>
     </footer>
-    <script src="../js/Shirts.js"></script>
+    <script src="../js/Registro.js"></script>
 </body>
+
 </html>
