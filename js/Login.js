@@ -10,12 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("password").value;
 
         // Aquí puedes verificar las credenciales. Por ejemplo, si las credenciales son correctas:
-        if (username === "usuario" && password === "contraseña") {
+        if (username === "Juan@gmail.com" && password === "12345") {
             // Redireccionar al usuario a la página de inicio
-            window.location.href = "inicio.html";
+            window.location.href = "../index.html";
         } else {
             // Mostrar un mensaje de error si las credenciales son incorrectas
             errorMessage.textContent = "Credenciales incorrectas. Inténtelo nuevamente.";
+            window.location.href = "../pages/Registro.html";
         }
     });
 });
