@@ -40,7 +40,7 @@ setInterval(() => {
 
 function buyProduct(productName) {
     const message = document.getElementById(`message${productName.charAt(productName.length - 1)}`);
-    message.textContent = `Has comprado ${productName}.`;
+    message.textContent = `YOU HAVE PURCHASED ${productName}.`;
 }
 
 // Limpiar los mensajes cuando se recarga la página

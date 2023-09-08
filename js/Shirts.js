@@ -1,6 +1,6 @@
 function buyProduct(productName) {
     const message = document.getElementById("message");
-    message.textContent = `Has comprado ${productName}.`;
+    message.textContent = `YOU HAVE PURCHASED ${productName}.`;
     
     const alertContainer = document.querySelector(".alert");
     alertContainer.style.visibility = "visible";
